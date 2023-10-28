@@ -5,14 +5,14 @@ print('#### Iníciando Jogo ####')
 random = randint(0, 100)
 chute = 0;
 chances = 10;
-while chute != random:
+for _ in range (chances):
     chute = input('Chute um número entre 0 a 100: ')
     if chute.isnumeric():
         chute = int(chute)
         chances = chances - 1
         if chute == random:
             print('')
-            print('Parabéns, você venceu! O número era {} e você ainda tinha {} chances.'.format(random, chances))
+            print('Parabéns, você venceu! O número era {} e você a inda tinha {} chances.'.format(random, chances))
             print('')
             break;
         else:
